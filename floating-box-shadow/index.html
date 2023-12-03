@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+
+<!-- ################ CSS ################# -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+:root{
+  --c-primary: #FE5F55;/*#272727;*/ 
+  --c-secondary: #FFDDE2;/*#535353;*/
+  --c-tertiary: #5E0D50;/*rgb(197, 197, 44);*/
+  --c-quaternary: #8D0D0D;/*rgb(107, 107, 107);*/
+}
+
+* {
+  font-family: 'Merriweather';
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  user-select: none;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s;
+  width: 200px;
+  height: 300px;
+  margin: 50px; /**/
+  text-align: center;
+  animation-play-state: paused;
+  animation-duration: 2s;
+  animation-name: floating-box-shadow;
+  animation-iteration-count: infinite;
+  background-color: rgba(0,0,0,0);
+}
+
+.card .title{
+  width: 200px;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.card img {
+  width: inherit;
+  min-height: 150px;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+  
+.card:hover{
+  cursor: pointer;
+  transition: 0.2s;
+  width:250px;
+  height: 350px;
+  animation-play-state: running;
+}
+
+
+.card .about{
+  transition: bottom .5s;
+  padding: 5px;
+  width: inherit;
+ 
+  background: #b12828;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom:-30px;
+}
+
+.card:hover .about{
+  bottom: 0;
+}
+
+@keyframes floating-box-shadow {
+  0%, 100% {
+      box-shadow: 10px -10px 0 10px var(--c-primary),
+                  10px 10px 0 10px var(--c-secondary),
+                  20px -20px 0 10px var(--c-tertiary),
+                  -20px 20px 0 10px var(--c-quaternary);
+  } 20% {
+      box-shadow: -20px 20px 0 10px var(--c-primary),
+                  10px -10px 0 10px var(--c-secondary),
+                  -20px -20px 0 10px var(--c-tertiary),
+                  10px 10px 0 10px var(--c-quaternary);
+  } 40% {
+      box-shadow: 10px 10px 0 10px var(--c-primary),
+                  -20px -20px 0 10px var(--c-secondary),
+                  -10px 10px 0 10px var(--c-tertiary),
+                  20px -20px 0 10px var(--c-quaternary);
+  } 60% {
+      box-shadow: 10px -10px 0 10px var(--c-primary),
+                  -10px -10px 0 10px var(--c-secondary),
+                  20px 20px 0 10px var(--c-tertiary),
+                  -20px 20px 0 10px var(--c-quaternary);
+  } 80% {
+      box-shadow: -20px -20px 0 10px var(--c-primary),
+                  -20px 20px 0 10px var(--c-secondary),
+                  10px 10px 0 10px var(--c-tertiary),
+                  10px -10px 0 10px var(--c-quaternary);
+  }
+}
+</style>
+
+
+
+<!-- ################### HTML #######################-->
+<body>
+   
+  <div class="card">
+    <img src="versace.webp" alt="">
+    <p class="title">VERSACE EROS FEMME FEMININO EAU DE TOILETTE</p>
+    <div class="about"><p>See More</p></div>
+  </div>
+
+</body>
+
+<!-- ################### JavaScript #######################-->
+<script></script>
+
+
+
+</html>
