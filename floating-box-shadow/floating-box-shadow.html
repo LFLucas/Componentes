@@ -24,8 +24,6 @@
   --m-c-secondary: #C1CEFE; /*#535353;*/
   --m-c-tertiary: #072855; /*rgb(197, 197, 44);*/
   --m-c-quaternary: #38618C; /*rgb(107, 107, 107);*/
-
-
 }
 
 * {
@@ -61,6 +59,40 @@ body {
   background-color: rgba(0,0,0,0);
 }
 
+.card .title{
+  width: 200px;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.card img {
+  width: inherit;
+  min-height: 150px;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+  
+.card:hover{
+  cursor: pointer;
+  transition: 0.2s;
+  width:250px;
+  height: 350px;
+  animation-play-state: running;
+}
+
+.card .about{
+  transition: top .5s;
+  padding: 5px;
+  width: inherit; 
+  color: white;
+  position: absolute;
+  left: 0;
+  top:-30px;
+}
+
+.card:hover .about{
+  top: 0;
+}
 
 .masc {
   --c-primary: var(--m-c-primary);
@@ -84,44 +116,7 @@ body {
   background-color: #8D0D0D;
 }
 
-
-.card .title{
-  width: 200px;
-  font-size: 1rem;
-  margin: 0 auto;
-}
-
-.card img {
-  width: inherit;
-  min-height: 150px;
-  height: fit-content;
-  margin-bottom: 10px;
-}
-  
-.card:hover{
-  cursor: pointer;
-  transition: 0.2s;
-  width:250px;
-  height: 350px;
-  animation-play-state: running;
-}
-
-.card .about{
-  transition: bottom .5s;
-  padding: 5px;
-  width: inherit; 
-  color: white;
-  position: absolute;
-  left: 0;
-  bottom:-30px;
-}
-
-.card:hover .about{
-  bottom: 0;
-}
-
-@keyframes floating-box-shadow {
- 
+@keyframes floating-box-shadow { 
   0%, 100% {
       box-shadow: 10px -10px 0 10px var(--c-primary),
                   10px 10px 0 10px var(--c-secondary),
@@ -149,6 +144,7 @@ body {
                   10px -10px 0 10px var(--c-quaternary);
   }
 }
+
 </style>
 
 
@@ -167,6 +163,7 @@ body {
     <p class="title">PRADA LUNA ROSSA OCEAN MASCULINO EAU DE TOILETTE</p>
     <div class="about"><p>See More</p></div>
   </div>
+ 
 
 </body>
 
