@@ -14,10 +14,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 :root{
-  --c-primary: #FE5F55;/*#272727;*/ 
-  --c-secondary: #FFDDE2;/*#535353;*/
-  --c-tertiary: #5E0D50;/*rgb(197, 197, 44);*/
-  --c-quaternary: #8D0D0D;/*rgb(107, 107, 107);*/
+  --f-c-primary: #FE5F55;/*#272727;*/ 
+  --f-c-secondary: #FFDDE2;/*#535353;*/
+  --f-c-tertiary: #5E0D50;/*rgb(197, 197, 44);*/
+  --f-c-quaternary: #8D0D0D;/*rgb(107, 107, 107);*/
+
+
+  --m-c-primary: #06D6A0; /*#272727;*/ 
+  --m-c-secondary: #C1CEFE; /*#535353;*/
+  --m-c-tertiary: #072855; /*rgb(197, 197, 44);*/
+  --m-c-quaternary: #38618C; /*rgb(107, 107, 107);*/
+
+
 }
 
 * {
@@ -53,6 +61,30 @@ body {
   background-color: rgba(0,0,0,0);
 }
 
+
+.masc {
+  --c-primary: var(--m-c-primary);
+  --c-secondary:var(--m-c-secondary);
+  --c-tertiary:var(--m-c-tertiary);
+  --c-quaternary:var(--m-c-quaternary);
+}
+
+.masc .about{
+  background-color: #072855;
+}
+
+.femm {
+  --c-primary: var(--f-c-primary);
+  --c-secondary:var(--f-c-secondary);
+  --c-tertiary:var(--f-c-tertiary);
+  --c-quaternary:var(--f-c-quaternary);
+}
+
+.femm .about{
+  background-color: #8D0D0D;
+}
+
+
 .card .title{
   width: 200px;
   font-size: 1rem;
@@ -74,13 +106,10 @@ body {
   animation-play-state: running;
 }
 
-
 .card .about{
   transition: bottom .5s;
   padding: 5px;
-  width: inherit;
- 
-  background: #b12828;
+  width: inherit; 
   color: white;
   position: absolute;
   left: 0;
@@ -92,6 +121,7 @@ body {
 }
 
 @keyframes floating-box-shadow {
+ 
   0%, 100% {
       box-shadow: 10px -10px 0 10px var(--c-primary),
                   10px 10px 0 10px var(--c-secondary),
@@ -126,9 +156,15 @@ body {
 <!-- ################### HTML #######################-->
 <body>
    
-  <div class="card">
+  <div class="card femm">
     <img src="versace.webp" alt="">
     <p class="title">VERSACE EROS FEMME FEMININO EAU DE TOILETTE</p>
+    <div class="about"><p>See More</p></div>
+  </div>
+
+  <div class="card masc">
+    <img src="prada.webp" alt="">
+    <p class="title">PRADA LUNA ROSSA OCEAN MASCULINO EAU DE TOILETTE</p>
     <div class="about"><p>See More</p></div>
   </div>
 
