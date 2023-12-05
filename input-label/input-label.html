@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- ########## CSS ##########-->
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #bdbdbd;
+}
+
+body{   
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.wrapper label{
+    left: 0;
+    bottom: 0;
+    transition: 0.2s;
+    position: absolute;
+    font-size: 1.5rem;
+}
+
+.wrapper #text{
+    height: 30px;
+    transition: 1s;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: larger;
+    margin-right: 20px;
+}
+
+.wrapper #text:focus{
+    transition: 1s;
+    border-bottom: .5px solid #bdbdbd;
+}
+
+.wrapper #text:focus ~ label, 
+.wrapper :not(#text:placeholder-shown) ~ label{
+    bottom: 100%;
+    font-size: 1rem;
+    
+}
+
+#submit{
+    transition: .2s;
+    padding: 10px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-image: url("./lupa.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;   
+}
+
+#submit:hover{
+    box-shadow: 0 0 0 10px rgb(82, 82, 82);
+    background-color: rgb(82, 82, 82);
+}
+
+
+</style>
+
+<!-- ########## HTML ##########-->
+<body>
+    <div class="wrapper">
+        <input type="text" id="text" placeholder=" ">
+        <label for="text">Search</label>
+        <input type="submit" id="submit" value="">
+    </div>
+</body>
+
+
+</html>
